@@ -1,0 +1,384 @@
+/* Set the default font, remove margins and paddings, and apply a background gradient to the entire body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%);
+    color: #333;
+}
+
+/* Style navigation links with white color, remove underline, and set relative positioning for animation */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Create an underline effect on navigation links that is hidden initially */
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -3px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Make the underline visible and scale it when hovering over navigation links */
+nav ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Apply a background gradient and transparent text fill on hover for navigation links */
+nav ul li a:hover {
+    background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.3s ease;
+}
+
+/* Style the header container with flexbox, sticky positioning, background gradient, and shadow */
+.header-container {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    top: 0;           
+    z-index: 1000;
+}
+
+/* Align brand and search input horizontally within the header */
+.brand-search {
+    display: flex;
+    align-items: center;
+}
+
+/* Style the brand title */
+.brand-search h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style the search input field with padding, border-radius, and background color */
+.brand-search input[type="text"] {
+    margin-left: 20px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+}
+
+/* Remove default list styling and apply flexbox to navigation list */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add margin to navigation list items */
+nav ul li {
+    margin: 0 20px;
+}
+
+/* Style the cart and profile icons */
+.cart-icon, .profile-icon {
+    font-size: 24px;
+    margin-left: 20px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the profile image within the profile icon */
+.profile-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Style the banner section with centered text, background image, and color overlay */
+.banner {
+    text-align: center;
+    background: url('https://i.pinimg.com/564x/3e/be/ff/3ebeff55c42aee4725d75e191878a580.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Add a dark overlay to the banner background */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* Style the banner heading */
+.banner h2 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Style the banner paragraph */
+.banner p {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+/* Style the location links container within the banner */
+.banner .location-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Style individual location links within the banner */
+.banner .location-links a {
+    margin: 5px 10px;
+    padding: 10px 15px;
+    background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Change background gradient on hover for location links */
+.banner .location-links a:hover {
+    background: radial-gradient(circle at 10% 20%, rgb(255, 94, 7) 0%, rgb(255, 197, 61) 90%);
+}
+
+/* Style available places section with padding, white background, and shadow */
+.available-places {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Style about us section with padding, white background, and shadow */
+.about-us {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Style about us heading */
+.about-us h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Style the container holding the about us text and image */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Style the about us text section */
+.about-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Style the about us image container */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the about us image with maximum width and border radius */
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Style products section with padding, background gradient, and shadow */
+.products {
+    padding: 40px 20px;
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Style products heading */
+.products h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Style the product grid container with flexbox */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style individual product cards */
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+/* Style product images with maximum width and transition for hover effect */
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Scale product images on hover */
+.product-card img:hover {
+    transform: scale(1.1);
+}
+
+/* Style product card heading */
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Style product card paragraphs */
+.product-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Style the add to cart button within product cards */
+.product-card button {
+    padding: 10px 15px;
+    background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Change background gradient on hover for add to cart button */
+.product-card button:hover {
+    background: radial-gradient(circle at 10% 20%, rgb(255, 94, 7) 0%, rgb(255, 197, 61) 90%);
+}
+
+/* Style the main content container with flexbox and gap */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+/* Style left and right content sections with white background, shadow, and padding */
+.left-content, .right-content {
+    background-color: #fff;
+    width: 48%;
+    min-height: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Style the footer with dark background, white text, and padding */
+footer {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+/* Center the footer content within a maximum width container */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style paragraphs within the footer */
+.footer-content p {
+    margin: 10px 0;
+}
+
+/* Style the footer links and social links containers with flexbox */
+.footer-links, .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Style individual footer and social link list items */
+.footer-links li, .social-links li {
+    margin: 5px 15px;
+}
+
+/* Style footer and social links with transition for hover effect */
+.footer-links a, .social-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Change link color on hover for footer and social links */
+.footer-links a:hover, .social-links a:hover {
+    color: #ff7043;
+}
+
+/* Style the social media heading */
+.social-media h3 {
+    margin-bottom: 10px;
+}
+
+/* Add top margin to the social media container */
+.social-media {
+    margin-top: 20px;
+}

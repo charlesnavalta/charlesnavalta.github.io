@@ -1,0 +1,488 @@
+/* General body styling */
+body {
+    /* Sets the font for the body to Roboto, with sans-serif as a fallback */
+    font-family: 'Roboto', sans-serif;
+    /* Removes default margin and padding */
+    margin: 0;
+    padding: 0;
+    /* Sets a radial gradient background for the body */
+    background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%);
+    /* Sets the default text color */
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    /* Uses flexbox for layout */
+    display: flex;
+    /* Spaces out the children elements evenly */
+    justify-content: space-between;
+    /* Centers the children elements vertically */
+    align-items: center;
+    /* Adds padding inside the navbar */
+    padding: 15px 30px;
+    /* Sets a radial gradient background for the navbar */
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    /* Sets the text color for the navbar */
+    color: #EEEEEE;
+    /* Adds a shadow below the navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for the logo image inside the navbar */
+.brand-logo img {
+    /* Sets the height of the logo image */
+    height: 50px;
+}
+
+/* Navbar links styling */
+.navbar-links ul {
+    /* Removes the default list styling */
+    list-style: none;
+    /* Removes padding and margin */
+    padding: 0;
+    margin: 0;
+    /* Uses flexbox for layout */
+    display: flex;
+}
+
+/* Styling for each list item in the navbar */
+.navbar-links li {
+    /* Adds horizontal margin between list items */
+    margin: 0 20px;
+}
+
+/* Styling for the anchor tags in the navbar */
+.navbar-links a {
+    /* Sets the text color */
+    color: #EEEEEE;
+    /* Removes text underline */
+    text-decoration: none;
+    /* Makes the text slightly bold */
+    font-weight: 500;
+    /* Adds a transition effect on color change */
+    transition: color 0.3s ease;
+}
+
+/* Hover and active state styling for the navbar links */
+.navbar-links a:hover,
+.navbar-links a.active {
+    /* Changes the text color on hover or active state */
+    color: #DC5F00;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    /* Hides the navbar links on smaller screens */
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    /* Sets the flex direction to column for the navbar links on smaller screens */
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* Centers the text and adds vertical margin to list items on smaller screens */
+    .navbar-links ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* Displays the navbar links when they have the 'active' class */
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* Sticky positioning for the header */
+header {
+    /* Makes the header sticky */
+    position: -webkit-sticky;
+    position: sticky;
+    /* Positions the header at the top */
+    top: 0;
+    /* Ensures the header is on top of other content */
+    z-index: 1000;
+}
+
+/* Home Profile Section styling */
+.home-profile {
+    /* Uses flexbox for layout */
+    display: flex;
+    /* Centers the children elements horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+    /* Adds padding inside the section */
+    padding: 50px;
+}
+
+/* Container styling for the profile section */
+.profile-container {
+    /* Uses flexbox for layout */
+    display: flex;
+    /* Spaces out the children elements evenly */
+    justify-content: space-between;
+    /* Centers the children elements vertically */
+    align-items: center;
+    /* Sets maximum width */
+    max-width: 1200px;
+    /* Sets the width to 80% of the parent */
+    width: 80%;
+    /* Sets a radial gradient background */
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    /* Adds padding inside the container */
+    padding: 30px;
+    /* Rounds the corners */
+    border-radius: 10px;
+    /* Adds a shadow below the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Text styling for the profile section */
+.profile-text {
+    /* Sets the text color */
+    color: #EEEEEE;
+    /* Sets maximum width */
+    max-width: 600px;
+}
+
+/* Styling for the profile header */
+.profile-text h1 {
+    /* Sets the font size */
+    font-size: 48px;
+    /* Removes margin */
+    margin: 0;
+}
+
+/* Styling for the span inside the profile header */
+.profile-text h1 span {
+    /* Changes the text color */
+    color: #DC5F00;
+}
+
+/* Styling for the profile paragraph */
+.profile-text p {
+    /* Sets the font size */
+    font-size: 14px;
+    /* Sets the line height */
+    line-height: 1.3;
+    /* Adds top margin */
+    margin-top: 20px;
+    /* Sets the text color */
+    color: #EEEEEE;
+}
+
+/* Styling for the profile button */
+.profile-button {
+    /* Sets the background color */
+    background-color: #DC5F00;
+    /* Sets the text color */
+    color: #EEEEEE;
+    /* Removes border */
+    border: none;
+    /* Adds padding inside the button */
+    padding: 15px 30px;
+    /* Adds top margin */
+    margin-top: 20px;
+    /* Changes the cursor to a pointer */
+    cursor: pointer;
+    /* Sets the font size */
+    font-size: 18px;
+    /* Rounds the corners */
+    border-radius: 5px;
+    /* Adds a transition effect on background color change */
+    transition: background-color 0.3s ease;
+    /* Adds a shadow below the button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover state styling for the profile button */
+.profile-button:hover {
+    /* Changes the background color on hover */
+    background-color: #b44a00;
+}
+
+/* Styling for the profile image */
+.profile-image img {
+    /* Sets the height of the image */
+    height: 350px;
+    /* Rounds the corners */
+    border-radius: 10px;
+    /* Adds left margin */
+    margin-left: 30px;
+}
+
+/* Institutional Info Section styling */
+#institutional-info {
+    /* Adds padding inside the section */
+    padding: 50px;
+}
+
+/* Container styling for the institutional info section */
+.institutional-container {
+    /* Sets maximum width */
+    max-width: 950px;
+    /* Centers the container */
+    margin: 0 auto;
+    /* Uses grid layout */
+    display: grid;
+    /* Defines two equal columns */
+    grid-template-columns: 1fr 1fr;
+    /* Adds gap between grid items */
+    gap: 20px;
+}
+
+/* Card styling for institutional info */
+.institutional-card {
+    /* Sets a radial gradient background */
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    /* Sets the text color */
+    color: #EEEEEE;
+    /* Adds padding inside the card */
+    padding: 20px;
+    /* Rounds the corners */
+    border-radius: 10px;
+    /* Adds a shadow below the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the headers in the institutional cards */
+.institutional-card h2 {
+    /* Sets the font size */
+    font-size: 24px;
+    /* Adds bottom margin */
+    margin-bottom: 10px;
+    /* Changes the text color */
+    color: #DC5F00;
+}
+
+/* Resume Section styling */
+#resume {
+    /* Adds padding inside the section */
+    padding: 40px;
+}
+
+/* Container styling for the resume section */
+.resume-container {
+    /* Sets maximum width */
+    max-width: 900px;
+    /* Centers the container */
+    margin: 0 auto;
+    /* Sets a radial gradient background */
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    /* Adds padding inside the container */
+    padding: 30px;
+    /* Rounds the corners */
+    border-radius: 10px;
+    /* Adds a shadow below the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sets the text color */
+    color: #EEEEEE;
+}
+
+/* Styling for the header in the resume section */
+.resume-container h2 {
+    /* Sets the font size */
+    font-size: 28px;
+    /* Changes the text color */
+    color: #DC5F00;
+    /* Adds bottom margin */
+    margin-bottom: 20px;
+    /* Centers the text */
+    text-align: center;
+}
+
+/* Container styling for the resume details */
+.resume-details {
+    /* Uses flexbox for layout */
+    display: flex;
+    /* Spaces out the children elements evenly */
+    justify-content: space-between;
+}
+
+/* Styling for each section in the resume details */
+.resume-details > div {
+    /* Sets the flex value to 1 */
+    flex: 1;
+    /* Adds padding inside each section */
+    padding: 10px;
+}
+
+/* Styling for the headers in the resume details */
+.resume-details h3 {
+    /* Sets the font size */
+    font-size: 22px;
+    /* Adds bottom margin */
+    margin-bottom: 10px;
+    /* Changes the text color */
+    color: #DC5F00;
+}
+
+/* Styling for the paragraphs in the resume details */
+.resume-details p {
+    /* Adds vertical margin */
+    margin: 5px 0;
+}
+
+/* Styling for the skills list */
+.skills ul {
+    /* Removes the default list styling */
+    list-style-type: none;
+    /* Removes padding */
+    padding: 0;
+}
+
+/* Adds a check mark before each list item in the skills list */
+.skills li::before {
+    /* Sets the content to a check mark */
+    content: '✓';
+    /* Changes the color of the check mark */
+    color: #DC5F00;
+    /* Adds right margin to the check mark */
+    margin-right: 5px;
+}
+
+/* Activities Section styling */
+.activities-container {
+    /* Adds padding inside the section */
+    padding: 50px;
+}
+
+/* Styling for the header in the activities section */
+.activities-container h2 {
+    /* Displays the element as a block */
+    display: block;
+    /* Sets a radial gradient background */
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    /* Changes the text color */
+    color: #DC5F00;
+    /* Centers the text */
+    text-align: center;
+    /* Adds padding inside the header */
+    padding: 40px;
+    /* Adds vertical margin */
+    margin: 10px 0;
+    /* Rounds the corners */
+    border-radius: 10px;
+    /* Removes text underline */
+    text-decoration: none;
+    /* Sets the font size */
+    font-size: 28px;
+    /* Adds a shadow below the header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ensures the box-sizing includes padding and border */
+    box-sizing: border-box;
+}
+
+/* Styling for each activity section */
+.activity-section {
+    /* Displays the element as a block */
+    display: block;
+    /* Sets a radial gradient background */
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+    /* Sets the text color */
+    color: #EEEEEE;
+    /* Centers the text */
+    text-align: center;
+    /* Adds padding inside the section */
+    padding: 20px;
+    /* Adds vertical margin */
+    margin: 10px 0;
+    /* Rounds the corners */
+    border-radius: 10px;
+    /* Removes text underline */
+    text-decoration: none;
+    /* Sets the font size */
+    font-size: 22px;
+    /* Adds a shadow below the section */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adds a transition effect on background color change */
+    transition: background 0.3s ease;
+}
+
+/* Hover state styling for the activity sections */
+.activity-section:hover {
+    /* Changes the background color on hover */
+    background: #DC5F00;
+    /* Changes the text color on hover */
+    color: #FFFFFF;
+}
+
+/* Footer styling */
+footer {
+    /* Sets the background color */
+    background-color: #1f1f1f;
+    /* Sets the text color */
+    color: white;
+    /* Adds padding inside the footer */
+    padding: 20px 30px;
+    /* Centers the text */
+    text-align: center;
+}
+
+/* Container styling for the footer content */
+.footer-content {
+    /* Sets maximum width */
+    max-width: 1200px;
+    /* Centers the container */
+    margin: 0 auto;
+}
+
+/* Styling for the paragraphs in the footer content */
+.footer-content p {
+    /* Adds vertical margin */
+    margin: 10px 0;
+}
+
+/* List styling for the footer and social links */
+.footer-links, .social-links {
+    /* Removes the default list styling */
+    list-style: none;
+    /* Removes padding */
+    padding: 0;
+    /* Adds vertical margin */
+    margin: 10px 0;
+    /* Uses flexbox for layout */
+    display: flex;
+    /* Centers the children elements */
+    justify-content: center;
+    /* Allows the children elements to wrap */
+    flex-wrap: wrap;
+}
+
+/* Styling for each list item in the footer and social links */
+.footer-links li, .social-links li {
+    /* Adds horizontal margin */
+    margin: 5px 15px;
+}
+
+/* Styling for the anchor tags in the footer and social links */
+.footer-links a, .social-links a {
+    /* Sets the text color */
+    color: white;
+    /* Removes text underline */
+    text-decoration: none;
+    /* Adds a transition effect on color change */
+    transition: color 0.3s;
+}
+
+/* Hover state styling for the footer and social links */
+.footer-links a:hover, .social-links a:hover {
+    /* Changes the text color on hover */
+    color: #ff7043;
+}
+
+/* Styling for the header in the social media section */
+.social-media h3 {
+    /* Adds bottom margin */
+    margin-bottom: 10px;
+}
+
+/* Container styling for the social media section */
+.social-media {
+    /* Adds top margin */
+    margin-top: 20px;
+}

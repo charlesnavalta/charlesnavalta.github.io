@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    weight: 0;
+}
+/*header*/
+header {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    }
+.myheader {
+    font-style: none;
+    display: flex;
+    align-items: center;
+}
+.myheader a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px; /* Add margin to the right */
+    transition: color 0.3s; /* Smooth color change */
+    }
+.myheader a:hover {
+    color: #45a049; /* Change color on hover */
+    }
+
+.myheader button {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth color change */
+    }
+
+.myheader button:hover {
+    background-color: darkgreen; /* Change button background color on hover */
+    }
+.container {
+    box-sizing: border-box;
+    background-color: darkblue;
+    border-radius: 10px;
+    margin: 100px 100px 100px 100px;
+    padding: 100px;
+}
+.container h1 {
+    position: relative;
+    margin-left: 50px;
+    margin-top: 0;
+    color: white;
+}

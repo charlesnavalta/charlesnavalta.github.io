@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specifies the character encoding for the HTML document -->
+    <meta charset="UTF-8">
+    <!-- Sets the viewport to make your website look good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Welcome!</title>
+    <!-- Link to the external CSS file for styling the page -->
+    <link rel="stylesheet" href="loginpage.css">
+    <!-- Link to the external icon library -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script>
+        // Function to handle the login process
+        function handleLogin(event) {
+            // Prevents the default form submission behavior
+            event.preventDefault();
+
+            // Gets the values entered in the username and password fields
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Object containing user data for validation (hardcoded for demo purposes)
+            const users = {
+                'admin': { password: 'password123', redirect: 'profile.html' },
+            };
+
+            // Checks if the entered username exists and if the password matches
+            if (users[username] && users[username].password === password) {
+                // Displays a welcome message if the credentials are correct
+                alert('Welcome to my portfolio');
+                // Redirects the user to the profile page
+                window.location.href = users[username].redirect;
+            } else {
+                // Displays an error message if the credentials are incorrect
+                alert('Invalid username or password. Please try again.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Main wrapper div for the login form -->
+    <div class="wrapper">
+        <!-- Login form with an onsubmit event to handle login -->
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <!-- Heading of the form -->
+            <h1>Login</h1>
+            <!-- Div for username input field -->
+            <div class="input-box">
+                <!-- Username input field with a placeholder and required attribute -->
+                <input type="text" id="username" placeholder="Username" required>
+                <!-- Icon for the username input field -->
+                <i class='bx bxs-user'></i>
+            </div>
+            <!-- Div for password input field -->
+            <div class="input-box">
+                <!-- Password input field with a placeholder and required attribute -->
+                <input type="password" id="password" placeholder="Password" required>
+                <!-- Icon for the password input field -->
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <!-- Div for remember me checkbox and forgot password link -->
+            <div class="remember-forgot">
+                <!-- Remember me checkbox -->
+                <label><input type="checkbox">Remember Me</label>
+                <!-- Forgot password link -->
+                <a href="#">Forgot password?</a>
+            </div>
+            <!-- Submit button for the form -->
+            <button type="submit" class="btn">Login</button>
+            <!-- Div for additional registration link -->
+            <div class="register-link"></div>
+            <!-- Text and link for registration -->
+            <p>Don't have an account?<a href="#">Register</a></p>
+        </form>
+    </div>
+</body>
+</html>
